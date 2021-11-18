@@ -8,9 +8,19 @@ public class Arrays {
      * @param numbers input numbers
      * @return min number
      */
-    public int getMinNumFromArray(int[][] numbers) {
-        return -1;
+    public int getMinNumFromArray(int[][] numbers)
+    {
+    int min = numbers[0][0];
+        for (int i=0; i<numbers.length; i++){
+        for (int j=0; j<numbers[i].length; j++){
+            if (min>numbers [i][j]) {
+                min = numbers [i][j];
+            }
+        }
     }
+        return min;
+    }
+
 
     /**
      * You need to implement a method for searching max number in the array.
